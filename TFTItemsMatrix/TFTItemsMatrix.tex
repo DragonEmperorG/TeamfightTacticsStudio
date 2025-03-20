@@ -1,0 +1,189 @@
+\documentclass{article}
+
+% https://ctan.org/pkg/geometry
+% geometry – Flexible and complete interface to document dimensions
+\usepackage{geometry}
+\geometry{a4paper}
+% 5.4 Margin size
+\geometry{left=0mm,right=0mm,top=0mm,bottom=0mm}
+
+% https://latexstudio.net/archives/7676 小四号 12pt 4.2175mm
+\usepackage{ctex}
+
+\setmainfont{Times New Roman}
+
+\usepackage{tikz}
+
+\usetikzlibrary{math}
+\usetikzlibrary{positioning}
+
+\thispagestyle{empty}
+
+\usepackage[dvipsnames]{xcolor}
+% https://waldyrious.net/viridis-palette-generator/
+\definecolor{PaletteViridisCategories7Color1}{HTML}{fde725}
+\definecolor{PaletteViridisCategories7Color2}{HTML}{90d743}
+\definecolor{PaletteViridisCategories7Color3}{HTML}{35b779}
+\definecolor{PaletteViridisCategories7Color4}{HTML}{21918c}
+\definecolor{PaletteViridisCategories7Color5}{HTML}{31688e}
+\definecolor{PaletteViridisCategories7Color6}{HTML}{443983}
+\definecolor{PaletteViridisCategories7Color7}{HTML}{440154}
+
+% https://developer.riotgames.com/docs/lol#data-dragon
+
+\begin{document}
+	
+	\begin{tikzpicture}[remember picture, overlay]
+	
+	    \tikzmath{
+   			\itemLength = 1;
+   			\itemIntervalLength = 0.6;
+   		}
+	
+	    \tikzset{
+   			square/.style={
+   				rectangle,
+   				draw,
+   				minimum size = \itemLength cm
+   			},
+   		}
+
+	    \fill [white] (current page.north west) rectangle (current page.south east);
+	    
+	    \node [] (NMatrixR5C5) at (current page.center) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_WarmogsArmor.png}};
+	    \node [left=\itemIntervalLength cm of NMatrixR5C5.center] (NMatrixR5C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_PowerGauntlet.png}};
+	    \node [left=\itemIntervalLength cm of NMatrixR5C4.center] (NMatrixR5C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Leviathan.png}};
+	    \node [left=\itemIntervalLength cm of NMatrixR5C3.center] (NMatrixR5C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Morellonomicon.png}};
+	    \node [left=\itemIntervalLength cm of NMatrixR5C2.center] (NMatrixR5C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SteraksGage.png}};
+	    \node [left=\itemIntervalLength cm of NMatrixR5C1.center] (NMatrixR5C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GiantsBelt.png}};
+	    \node [right=\itemIntervalLength cm of NMatrixR5C5.center] (NMatrixR5C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Redemption.png}};
+ 	    \node [right=\itemIntervalLength cm of NMatrixR5C6.center] (NMatrixR5C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RedBuff.png}};
+ 	    \node [right=\itemIntervalLength cm of NMatrixR5C7.center] (NMatrixR5C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SpectralGauntlet.png}};
+ 	    \node [right=\itemIntervalLength cm of NMatrixR5C8.center] (NMatrixR5C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+ 	    \node [right=\itemIntervalLength cm of NMatrixR5C9.center] (NMatrixR5C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+ 	    
+ 	    \node [above=\itemIntervalLength cm of NMatrixR5C0.center] (NMatrixR4C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SparringGloves.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR5C1.center] (NMatrixR4C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_InfinityEdge.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR5C2.center] (NMatrixR4C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_JeweledGauntlet.png}}; 	    
+ 	    \node [above=\itemIntervalLength cm of NMatrixR5C3.center] (NMatrixR4C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_LastWhisper.png}};
+  	    \node [above=\itemIntervalLength cm of NMatrixR5C4.center] (NMatrixR4C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_ThiefsGloves.png}};
+  	    \node [above=\itemIntervalLength cm of NMatrixR5C5.center] (NMatrixR4C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_PowerGauntlet.png}};   
+  	    \node [above=\itemIntervalLength cm of NMatrixR5C6.center] (NMatrixR4C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_UnstableConcoction.png}};
+   	    \node [above=\itemIntervalLength cm of NMatrixR5C7.center] (NMatrixR4C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NightHarvester.png}};
+   	    \node [above=\itemIntervalLength cm of NMatrixR5C8.center] (NMatrixR4C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Quicksilver.png}};
+   	    \node [above=\itemIntervalLength cm of NMatrixR5C9.center] (NMatrixR4C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+   	    \node [above=\itemIntervalLength cm of NMatrixR5C10.center] (NMatrixR4C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+   	    
+   	    \node [above=\itemIntervalLength cm of NMatrixR4C0.center] (NMatrixR3C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+   	    \node [above=\itemIntervalLength cm of NMatrixR4C1.center] (NMatrixR3C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_MadredsBloodrazor.png}};
+   	    \node [above=\itemIntervalLength cm of NMatrixR4C2.center] (NMatrixR3C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GuinsoosRageblade.png}}; 	    
+   	    \node [above=\itemIntervalLength cm of NMatrixR4C3.center] (NMatrixR3C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RapidFireCannon.png}};
+	    \node [above=\itemIntervalLength cm of NMatrixR4C4.center] (NMatrixR3C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_LastWhisper.png}};
+	    \node [above=\itemIntervalLength cm of NMatrixR4C5.center] (NMatrixR3C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TitansResolve.png}};   
+	    \node [above=\itemIntervalLength cm of NMatrixR4C6.center] (NMatrixR3C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_StatikkShiv.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR4C7.center] (NMatrixR3C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TitansResolve.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR4C8.center] (NMatrixR3C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RunaansHurricane.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR4C9.center] (NMatrixR3C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR4C10.center] (NMatrixR3C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+ 	    
+ 	    \node [above=\itemIntervalLength cm of NMatrixR3C0.center] (NMatrixR2C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NeedlesslyLargeRod.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR3C1.center] (NMatrixR2C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_HextechGunblade.png}};
+ 	    \node [above=\itemIntervalLength cm of NMatrixR3C2.center] (NMatrixR2C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RabadonsDeathcap.png}}; 	    
+ 	    \node [above=\itemIntervalLength cm of NMatrixR3C3.center] (NMatrixR2C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GuinsoosRageblade.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR3C4.center] (NMatrixR2C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_JeweledGauntlet.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR3C5.center] (NMatrixR2C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Morellonomicon.png}};   
+		\node [above=\itemIntervalLength cm of NMatrixR3C6.center] (NMatrixR2C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_ArchangelsStaff.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR3C7.center] (NMatrixR2C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Crownguard.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR3C8.center] (NMatrixR2C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_IonicSpark.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR3C9.center] (NMatrixR2C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR3C10.center] (NMatrixR2C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		
+		\node [above=\itemIntervalLength cm of NMatrixR2C0.center] (NMatrixR1C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_BFSword.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C1.center] (NMatrixR1C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Deathblade.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C2.center] (NMatrixR1C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_HextechGunblade.png}}; 	    
+		\node [above=\itemIntervalLength cm of NMatrixR2C3.center] (NMatrixR1C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_MadredsBloodrazor.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C4.center] (NMatrixR1C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_InfinityEdge.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C5.center] (NMatrixR1C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SteraksGage.png}};   
+		\node [above=\itemIntervalLength cm of NMatrixR2C6.center] (NMatrixR1C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SpearOfShojin.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C7.center] (NMatrixR1C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GuardianAngel.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C8.center] (NMatrixR1C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Bloodthirster.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C9.center] (NMatrixR1C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR2C10.center] (NMatrixR1C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		
+		\node [above=\itemIntervalLength cm of NMatrixR1C0.center] (NMatrixR0C0) {};
+		\node [above=\itemIntervalLength cm of NMatrixR1C1.center] (NMatrixR0C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_BFSword.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C2.center] (NMatrixR0C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NeedlesslyLargeRod.png}}; 	    
+		\node [above=\itemIntervalLength cm of NMatrixR1C3.center] (NMatrixR0C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C4.center] (NMatrixR0C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SparringGloves.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C5.center] (NMatrixR0C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GiantsBelt.png}};   
+		\node [above=\itemIntervalLength cm of NMatrixR1C6.center] (NMatrixR0C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TearOfTheGoddess.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C7.center] (NMatrixR0C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_ChainVest.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C8.center] (NMatrixR0C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NegatronCloak.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C9.center] (NMatrixR0C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Spatula.png}};
+		\node [above=\itemIntervalLength cm of NMatrixR1C10.center] (NMatrixR0C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_FryingPan.png}};
+		
+		\node [below=\itemIntervalLength cm of NMatrixR5C0.center] (NMatrixR6C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TearOfTheGoddess.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C1.center] (NMatrixR6C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SpearOfShojin.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C2.center] (NMatrixR6C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}}; 	    
+		\node [below=\itemIntervalLength cm of NMatrixR5C3.center] (NMatrixR6C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_StatikkShiv.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C4.center] (NMatrixR6C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_UnstableConcoction.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C5.center] (NMatrixR6C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Redemption.png}};   
+		\node [below=\itemIntervalLength cm of NMatrixR5C6.center] (NMatrixR6C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_BlueBuff.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C7.center] (NMatrixR6C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_FrozenHeart.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C8.center] (NMatrixR6C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_AdaptiveHelm.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C9.center] (NMatrixR6C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR5C10.center] (NMatrixR6C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		
+		\node [below=\itemIntervalLength cm of NMatrixR6C0.center] (NMatrixR7C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_ChainVest.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C1.center] (NMatrixR7C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GuardianAngel.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C2.center] (NMatrixR7C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_ArchangelsStaff.png}}; 	    
+		\node [below=\itemIntervalLength cm of NMatrixR6C3.center] (NMatrixR7C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TitansResolve.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C4.center] (NMatrixR7C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NightHarvester.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C5.center] (NMatrixR7C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RedBuff.png}};   
+		\node [below=\itemIntervalLength cm of NMatrixR6C6.center] (NMatrixR7C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_FrozenHeart.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C7.center] (NMatrixR7C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_BrambleVest.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C8.center] (NMatrixR7C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GargoyleStoneplate.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C9.center] (NMatrixR7C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR6C10.center] (NMatrixR7C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		
+		\node [below=\itemIntervalLength cm of NMatrixR7C0.center] (NMatrixR8C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NegatronCloak.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C1.center] (NMatrixR8C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Bloodthirster.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C2.center] (NMatrixR8C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_IonicSpark.png}}; 	    
+		\node [below=\itemIntervalLength cm of NMatrixR7C3.center] (NMatrixR8C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RunaansHurricane.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C4.center] (NMatrixR8C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Quicksilver.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C5.center] (NMatrixR8C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_SpectralGauntlet.png}};   
+		\node [below=\itemIntervalLength cm of NMatrixR7C6.center] (NMatrixR8C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_AdaptiveHelm.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C7.center] (NMatrixR8C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_GargoyleStoneplate.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C8.center] (NMatrixR8C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_DragonsClaw.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C9.center] (NMatrixR8C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR7C10.center] (NMatrixR8C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_NegatronCloak.png}};
+		
+		\node [below=\itemIntervalLength cm of NMatrixR8C0.center] (NMatrixR9C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_Spatula.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C1.center] (NMatrixR9C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C2.center] (NMatrixR9C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}}; 	    
+		\node [below=\itemIntervalLength cm of NMatrixR8C3.center] (NMatrixR9C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C4.center] (NMatrixR9C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C5.center] (NMatrixR9C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};   
+		\node [below=\itemIntervalLength cm of NMatrixR8C6.center] (NMatrixR9C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C7.center] (NMatrixR9C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C8.center] (NMatrixR9C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C9.center] (NMatrixR9C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR8C10.center] (NMatrixR9C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TacticiansRing.png}};
+		
+		\node [below=\itemIntervalLength cm of NMatrixR9C0.center] (NMatrixR10C0) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_FryingPan.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C1.center] (NMatrixR10C1) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C2.center] (NMatrixR10C2) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}}; 	    
+		\node [below=\itemIntervalLength cm of NMatrixR9C3.center] (NMatrixR10C3) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C4.center] (NMatrixR10C4) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C5.center] (NMatrixR10C5) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};   
+		\node [below=\itemIntervalLength cm of NMatrixR9C6.center] (NMatrixR10C6) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C7.center] (NMatrixR10C7) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C8.center] (NMatrixR10C8) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_RecurveBow.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C9.center] (NMatrixR10C9) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TacticiansRing.png}};
+		\node [below=\itemIntervalLength cm of NMatrixR9C10.center] (NMatrixR10C10) {\includegraphics[width=\itemLength cm]{../dragontail/dragontail-15.5.1/15.5.1/img/tft-item/TFT_Item_TacticiansScepter.png}};
+	    
+	\end{tikzpicture}
+	
+	
+	
+\end{document}
