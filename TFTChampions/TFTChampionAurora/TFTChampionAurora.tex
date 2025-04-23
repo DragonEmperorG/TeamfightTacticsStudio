@@ -1,0 +1,64 @@
+\documentclass{standalone}
+
+% https://latexstudio.net/archives/7676 小四号 12pt 4.2175mm
+\usepackage{ctex}
+
+\setmainfont{Times New Roman}
+
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{math}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+
+\usepackage[dvipsnames]{xcolor}
+% https://waldyrious.net/viridis-palette-generator/
+\definecolor{PaletteViridisCategories7Color1}{HTML}{fde725}
+\definecolor{PaletteViridisCategories7Color2}{HTML}{90d743}
+\definecolor{PaletteViridisCategories7Color3}{HTML}{35b779}
+\definecolor{PaletteViridisCategories7Color4}{HTML}{21918c}
+\definecolor{PaletteViridisCategories7Color5}{HTML}{31688e}
+\definecolor{PaletteViridisCategories7Color6}{HTML}{443983}
+\definecolor{PaletteViridisCategories7Color7}{HTML}{440154}
+
+\usepackage{adjustbox}
+
+% https://developer.riotgames.com/docs/lol#data-dragon
+
+\begin{document}
+	
+	\begin{tikzpicture}
+	
+	    \tikzmath{
+   			\championHorizontalInterval = 1.5;
+   			\itemLength = 1;
+   			\itemIntervalLength = 0.6;
+   		}
+	
+	    \tikzset{
+   			square/.style={
+   				rectangle,
+   				draw,
+   				minimum size = \itemLength cm
+   			},
+   		}
+	    
+	    % 
+		\begin{scope}
+		    \foreach \ang in {30,90,...,330}{
+		         \coordinate (\ang) at  (\ang:2 cm);}
+		    \clip (30) -- (90) -- (150) -- (210) -- (270) -- (330) -- cycle;
+		    \node [] {\includegraphics[trim=128pt 0 0 0,clip]{../../dragontail/dragontail-15.8.1/15.8.1/img/tft-champion/TFT14_Aurora.TFT_Set14.png}};
+ 		\end{scope}
+ 		
+ 		\coordinate (CItemColumn2) at (0,-2);
+ 		\coordinate (CItemColumn1) at at($ (CItemColumn2) - (1.1cm,0) $);
+ 		\coordinate (CItemColumn3) at at($ (CItemColumn2) + (1.1cm,0) $);
+ 		\node at(CItemColumn1) {\includegraphics[width=1 cm]{../../dragontail/dragontail-15.8.1/15.8.1/img/tft-item/TFT_Item_ArchangelsStaff.png}};
+ 		\node at(CItemColumn2) {\includegraphics[width=1 cm]{../../dragontail/dragontail-15.8.1/15.8.1/img/tft-item/TFT_Item_ArchangelsStaff.png}};
+ 		\node at(CItemColumn3) {\includegraphics[width=1 cm]{../../dragontail/dragontail-15.8.1/15.8.1/img/tft-item/TFT_Item_ArchangelsStaff.png}};	
+
+	\end{tikzpicture}
+	
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass{standalone}
+
+% https://latexstudio.net/archives/7676 小四号 12pt 4.2175mm
+\usepackage{ctex}
+
+\setmainfont{Times New Roman}
+
+\usepackage{tikz}
+
+\usetikzlibrary{math}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+
+\usepackage[dvipsnames]{xcolor}
+% https://waldyrious.net/viridis-palette-generator/
+\definecolor{PaletteViridisCategories7Color1}{HTML}{fde725}
+\definecolor{PaletteViridisCategories7Color2}{HTML}{90d743}
+\definecolor{PaletteViridisCategories7Color3}{HTML}{35b779}
+\definecolor{PaletteViridisCategories7Color4}{HTML}{21918c}
+\definecolor{PaletteViridisCategories7Color5}{HTML}{31688e}
+\definecolor{PaletteViridisCategories7Color6}{HTML}{443983}
+\definecolor{PaletteViridisCategories7Color7}{HTML}{440154}
+
+\usepackage{adjustbox}
+
+% https://developer.riotgames.com/docs/lol#data-dragon
+
+\begin{document}
+	
+	\begin{tikzpicture}
+	
+	    \tikzmath{
+   			\championHorizontalInterval = 1.5;
+   			\championLength = 1.2;
+   		}
+	
+	    \tikzset{
+   			square/.style={
+   				rectangle,
+   				draw,
+   				minimum size = \itemLength cm
+   			},
+   		}
+	    
+	    % 
+		\coordinate (NComps01) at (0, 0);
+		\node [above right=1 cm and 0 cm of NComps01] {幻灵战队};
+		
+		\coordinate [right=0.6 cm of NComps01] (NCompsChampion01);
+		\node at (NCompsChampion01) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion01] (NCompsChampion02);
+		\node at (NCompsChampion02) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion02] (NCompsChampion03);
+		\node at (NCompsChampion03) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion03] (NCompsChampion04);
+		\node at (NCompsChampion04) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion04] (NCompsChampion05);
+		\node at (NCompsChampion05) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion05] (NCompsChampion06);
+		\node at (NCompsChampion06) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion06] (NCompsChampion07);
+		\node at (NCompsChampion07) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion07] (NCompsChampion08);
+		\node at (NCompsChampion08) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion08] (NCompsChampion09);
+		\node at (NCompsChampion09) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+		\coordinate [right=\championHorizontalInterval cm of NCompsChampion09] (NCompsChampion10);
+		\node at (NCompsChampion10) {\includegraphics[width=\championLength cm]{../../TFTChampions/TFTChampionAurora/TFTChampionAurora.pdf}};
+		
+
+	\end{tikzpicture}
+	
+\end{document}

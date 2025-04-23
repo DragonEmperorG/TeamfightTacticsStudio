@@ -1,0 +1,92 @@
+\documentclass{article}
+
+% https://ctan.org/pkg/geometry
+% geometry – Flexible and complete interface to document dimensions
+\usepackage{geometry}
+\geometry{a4paper}
+% 5.4 Margin size
+\geometry{left=0mm,right=0mm,top=0mm,bottom=0mm}
+
+% https://latexstudio.net/archives/7676 小四号 12pt 4.2175mm
+\usepackage{ctex}
+
+\setmainfont{Times New Roman}
+
+\usepackage{tikz}
+
+\usetikzlibrary{math}
+\usetikzlibrary{positioning}
+
+\thispagestyle{empty}
+
+\usepackage[dvipsnames]{xcolor}
+% https://waldyrious.net/viridis-palette-generator/
+\definecolor{PaletteViridisCategories7Color1}{HTML}{fde725}
+\definecolor{PaletteViridisCategories7Color2}{HTML}{90d743}
+\definecolor{PaletteViridisCategories7Color3}{HTML}{35b779}
+\definecolor{PaletteViridisCategories7Color4}{HTML}{21918c}
+\definecolor{PaletteViridisCategories7Color5}{HTML}{31688e}
+\definecolor{PaletteViridisCategories7Color6}{HTML}{443983}
+\definecolor{PaletteViridisCategories7Color7}{HTML}{440154}
+
+\usepackage{adjustbox}
+
+% https://developer.riotgames.com/docs/lol#data-dragon
+
+\begin{document}
+	
+	\begin{tikzpicture}[remember picture, overlay]
+	
+	    \tikzmath{
+   			\compsVertivalInterval = 2.5;
+   			\itemLength = 1;
+   			\itemIntervalLength = 0.6;
+   		}
+	
+	    \tikzset{
+   			square/.style={
+   				rectangle,
+   				draw,
+   				minimum size = \itemLength cm
+   			},
+   		}
+
+	    \fill [white] (current page.north west) rectangle (current page.south east);
+	    
+	    % 
+		\coordinate [below right=2 cm and 2 cm of current page.north west] (NComps01);
+		\node [right=0 cm of NComps01] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps01] (NComps02);
+		\node [right=0 cm of NComps02] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps02] (NComps03);
+		\node [right=0 cm of NComps03] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps03] (NComps04);
+		\node [right=0 cm of NComps04] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps04] (NComps05);
+		\node [right=0 cm of NComps05] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps05] (NComps06);
+		\node [right=0 cm of NComps06] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps06] (NComps07);
+		\node [right=0 cm of NComps07] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps07] (NComps08);
+		\node [right=0 cm of NComps08] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps08] (NComps09);
+		\node [right=0 cm of NComps09] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+		
+		\coordinate [below=\compsVertivalInterval cm of NComps09] (NComps10);
+		\node [right=0 cm of NComps10] {\includegraphics{./TFTCompsAnimaSquad/TFTCompsAnimaSquad.pdf}};
+
+	    
+	\end{tikzpicture}
+	
+	
+	
+\end{document}
